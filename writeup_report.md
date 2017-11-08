@@ -13,11 +13,10 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/placeholder.png "Model Visualization"
-[image2]: ./examples/placeholder.png "Grayscaling"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
+[image1]: ./images/modelarch.jpg "Model Arch"
+[image2]: ./images/centraldriving.jpg "Central driving Image"
+[image3]: ./images/leftsideimage.jpg "Left side Image"
+[image4]: ./images/rightsideimage.jpg "Right side Image"
 [image6]: ./examples/placeholder_small.png "Normal Image"
 [image7]: ./examples/placeholder_small.png "Flipped Image"
 
@@ -91,20 +90,7 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 ####2. Final Model Architecture
 
 The final model architecture consisted of a convolution neural network with the following layers and layer sizes:
-model = Sequential ()
-model.add(Lambda(lambda x: x/255.0 - 0.5, input_shape = (160,320,3))) #normalize data
-model.add(Cropping2D(cropping=((70, 25),(0,0))))
-model.add(Convolution2D(24,5,5,subsample=(2, 2), activation = 'relu'))
-model.add(Convolution2D(36,5,5,subsample=(2, 2), activation = 'relu'))
-model.add(Convolution2D(48,5,5,subsample=(2, 2), activation = 'relu'))
-model.add(Convolution2D(64,3,3, activation = 'relu'))
-model.add(Convolution2D(64,3,3, activation = 'relu'))
-model.add(Dropout(0.5))
-model.add(Flatten())
-model.add(Dense(100))
-model.add(Dense(50))
-model.add(Dense(10))
-model.add(Dense(1))
+![alt text][image1]
 
 
 ####3. Creation of the Training Set & Training Process
@@ -113,24 +99,20 @@ To capture good driving behavior, I first recorded two laps on track one using c
 
 ![alt text][image2]
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
+I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to steer more to the left when the vehicle sees the right sides of image, and steer more to the right when the car see left side of image. 
 
+Left side image:
 ![alt text][image3]
+Reft side image:
 ![alt text][image4]
-![alt text][image5]
-
-Then I repeated this process on track two in order to get more data points.
-
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
-
-![alt text][image6]
-![alt text][image7]
-
-Etc ....
-
-After the collection process, I had X number of data points. I then preprocessed this data by ...
 
 
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
+To augment the data sat, I also flipped images and angles thinking that this would create more comprehensive/generalized data to the model for training. 
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+
+
+After the collection process, I had 11875 number of data points. 
+
+I finally randomly shuffled the data set and put 20% of the data into a validation set. 
+
+I used the training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 7 as evidenced by the  I used an adam optimizer so that manually training the learning rate wasn't necessary.
