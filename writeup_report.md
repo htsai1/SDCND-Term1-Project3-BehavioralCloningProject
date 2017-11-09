@@ -103,6 +103,7 @@ I then recorded the vehicle recovering from the left side and right sides of the
 
 Left side image:
 ![alt text][image3]
+
 Reft side image:
 ![alt text][image4]
 
