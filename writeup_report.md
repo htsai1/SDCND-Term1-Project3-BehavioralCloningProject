@@ -13,7 +13,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./images/modelarch.jpg "Model Arch"
+[image1]: ./images/modelarch.JPG "Model Arch"
 [image2]: ./images/centraldriving.jpg "Central driving Image"
 [image3]: ./images/leftsideimage.jpg "Left side Image"
 [image4]: ./images/rightsideimage.jpg "Right side Image"
