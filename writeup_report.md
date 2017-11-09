@@ -114,6 +114,7 @@ Reft side image:
 
 To augment the data sat, I also flipped images and angles thinking that this would create more comprehensive/generalized data to the model for training. 
 
+To save processing time, I also corped each image so only the road image, which is the lower section of the original image, be feed into the model.
 
 
 After the collection process, I had 11875 number of data points. 
