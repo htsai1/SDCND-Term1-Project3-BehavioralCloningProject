@@ -95,16 +95,19 @@ The final model architecture consisted of a convolution neural network with the 
 
 ####3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+To capture good driving behavior, I first recorded two laps on track one using center lane driving. 
+Here is an example image of center lane driving:
 
 ![alt text][image2]
 
 I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to steer more to the left when the vehicle sees the right sides of image, and steer more to the right when the car see left side of image. 
 
 Left side image:
+
 ![alt text][image3]
 
 Reft side image:
+
 ![alt text][image4]
 
 
@@ -116,4 +119,4 @@ After the collection process, I had 11875 number of data points.
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-I used the training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 7 as evidenced by the  I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used the training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 7 as evidenced by the I used an adam optimizer so that manually training the learning rate wasn't necessary.
