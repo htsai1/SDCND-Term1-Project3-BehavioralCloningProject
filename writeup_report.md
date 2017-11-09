@@ -50,7 +50,7 @@ The model.py file contains the code for training and saving the convolution neur
 
 I built my model with reference of Nvidia Architecture. The final model consists of total five convolution neural network (three with 5x5 filter and two with 3x3 filter sizes) and four dense layers.
 
-The model includes RELU layers to introduce nonlinearity, and the data is normalized in the model using a Keras lambda layer . 
+The model includes RELU layers to introduce nonlinearity, and the data is normalized in the model using a Keras lambda layer. 
 
 ####2. Attempts to reduce overfitting in the model
 
